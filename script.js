@@ -2,6 +2,7 @@ let rows = document.querySelectorAll("div.row");
 let balls = document.querySelectorAll(".row span");
 let redScore = document.querySelector(".red span");
 let blueScore = document.querySelector(".blue span");
+let playerTurn = document.querySelector(".playerTurn");
 let r=0,b=0;
 let playerBlue = true;
 let rightArr = [];
@@ -34,11 +35,14 @@ window.addEventListener("click", (el)=> {
       if(playerBlue){
         playerBlue = false;
         element.style.backgroundColor = "red";
-        
+        playerTurn.style.backgroundColor = "blue";
+        document.querySelector(".turn span").innerHTML = "blue";
       }
       else{
         playerBlue = true;
         element.style.backgroundColor = "blue";
+        playerTurn.style.backgroundColor = "red";
+        document.querySelector(".turn span").innerHTML = "red";
       }
 
       if (checkline(findeParent(el).querySelectorAll("span"))){
