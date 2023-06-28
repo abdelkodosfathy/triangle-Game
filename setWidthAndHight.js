@@ -5,5 +5,5 @@ setHeightAndWidth = () => {
     document.body.style.width = `${currentWidth}px`;
 }
 
-window.addEventListener("resize", setHeight);
+window.addEventListener("resize", setHeightAndWidth);
 setHeightAndWidth();
