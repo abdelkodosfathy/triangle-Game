@@ -11,24 +11,24 @@ body{
   flex-direction: column;
 }
 .container{
-  width: 600px;
-  height: 700px;
+  width: 350px;
+  height: 450px;
   display: flex;
   flex-direction: column-reverse;
 }
 div {
-  width: 700px;
+  width: 400px;
   display: flex;
   justify-content: center;
 }
 div .ball{
   cursor: pointer;
   margin: 10px;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: solid black 5px;
 }
 .player p{
-  font-size: 26px;
+  font-size: 20px;
 }
