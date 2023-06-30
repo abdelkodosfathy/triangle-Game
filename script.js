@@ -34,15 +34,19 @@ window.addEventListener("click", (el)=> {
       element.classList.add("used");
       if(playerBlue){
         playerBlue = false;
-        element.style.backgroundColor = "red";
-        playerTurn.style.backgroundColor = "blue";
-        document.querySelector(".turn span").innerHTML = "blue";
+        element.style.backgroundColor = "var(--red)";
+        element.style.boxShadow = "0 0 1px var(--red),0 0 60px var(--red)";
+        playerTurn.style.backgroundColor = "var(--blue)";
+        playerTurn.style.boxShadow = "0 0 1px var(--blue),0 0 60px var(--blue)";
+        // document.querySelector(".turn span").innerHTML = "blue";
       }
       else{
         playerBlue = true;
-        element.style.backgroundColor = "blue";
-        playerTurn.style.backgroundColor = "red";
-        document.querySelector(".turn span").innerHTML = "red";
+        element.style.backgroundColor = "var(--blue)";
+        element.style.boxShadow = "0 0 1px var(--blue),0 0 60px var(--blue)";
+        playerTurn.style.backgroundColor = "var(--red)";
+        playerTurn.style.boxShadow = "0 0 1px var(--red),0 0 60px var(--red)";
+        // document.querySelector(".turn span").innerHTML = "red";
       }
 
       if (checkline(findeParent(el).querySelectorAll("span"))){
@@ -89,9 +93,11 @@ function checkline (ind){
   // if it was the last ball in the line -> return true
   for(let j = 0; j < array.length; j++){
     if(!playerBlue){
-      array[j].style.backgroundColor = "red";
+      array[j].style.backgroundColor = "var(--red)";
+      array[j].style.boxShadow = "0 0 1px var(--red),0 0 60px var(--red)";
     }else{
-      array[j].style.backgroundColor = "blue";
+      array[j].style.backgroundColor = "var(--blue)";
+      array[j].style.boxShadow = "0 0 1px var(--blue),0 0 60px var(--blue)";
     }
   }
   return true;
@@ -117,9 +123,11 @@ function checkRightSlant(element){
       if(Points[1] == rightArr[i].length){
         for(let j = 0; j < rightArr[i].length; j++){
           if(!playerBlue){
-            balls[rightArr[i][j]-1].style.backgroundColor = "red";
+            balls[rightArr[i][j]-1].style.backgroundColor = "var(--red)";
+            balls[rightArr[i][j]-1].style.boxShadow = "0 0 1px var(--red),0 0 60px var(--red)";
           }else{
-            balls[rightArr[i][j]-1].style.backgroundColor = "blue";
+            balls[rightArr[i][j]-1].style.backgroundColor = "var(--blue)";
+            balls[rightArr[i][j]-1].style.boxShadow = "0 0 1px var(--blue),0 0 60px var(--blue)";
           }
         }
       }
@@ -146,9 +154,11 @@ function checkLeftSlant(element){
       if(Points[2] == leftArr[i].length){
         for(let j = 0; j < leftArr[i].length; j++){
           if(!playerBlue){
-            balls[leftArr[i][j]-1].style.backgroundColor = "red";
+            balls[leftArr[i][j]-1].style.backgroundColor = "var(--red)";
+            balls[leftArr[i][j]-1].style.boxShadow = "0 0 1px var(--red),0 0 60px var(--red)";
           }else{
-            balls[leftArr[i][j]-1].style.backgroundColor = "blue";
+            balls[leftArr[i][j]-1].style.backgroundColor = "var(--blue)";
+            balls[leftArr[i][j]-1].style.boxShadow = "0 0 1px var(--blue),0 0 60px var(--blue)";
           }
         }
       }
